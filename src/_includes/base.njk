@@ -10,6 +10,11 @@ title: My Rad Blog
     <title>{{ title }}</title>
   </head>
   <body>
+    {% block content %}
+  <article>
+    <h1>halla dette er {{ title }}</h1>
     {{ content | safe }}
+  </article>
+{% endblock %}
   </body>
 </html>
