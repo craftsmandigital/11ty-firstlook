@@ -7,14 +7,11 @@ title: My Rad Blog
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/tailwind.css">
+  <title>xxxxxx {{ title }}</title>
   </head>
+  <h1 class="text-lg">xxxxxx {{ title }}</h1>
   <body>
-    {% block content %}
-  <article>
-    <h1>halla dette er {{ title }}</h1>
     {{ content | safe }}
-  </article>
-{% endblock %}
   </body>
 </html>
