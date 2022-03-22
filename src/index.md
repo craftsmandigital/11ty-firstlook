@@ -1,6 +1,6 @@
 ---
 title: Dette er index.htm
-layout: base.njk
+layout: blogpost.njk
 
 ---
 # {{ title }}

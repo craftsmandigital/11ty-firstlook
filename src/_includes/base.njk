@@ -13,5 +13,9 @@ title: My Rad Blog
   <h1 class="text-lg">xxxxxx {{ title }}</h1>
   <body>
     {{ content | safe }}
+    {% block test %}
+<h2>This is base content block test.</h2>
+{% endblock %}
+
   </body>
 </html>
