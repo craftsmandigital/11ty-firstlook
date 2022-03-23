@@ -1,7 +1,10 @@
 ---
 title: Dette er index.htm
 layout: blogpost.njk
-
+pagination:
+  data: collections.blog
+  size: 2
+  alias: blog
 ---
 # {{ title }}
 
@@ -12,7 +15,16 @@ Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labor
 
 
 <ul>
-{%- for post in collections.blog -%}
+{%- for post in blog-%}
   <li>{{ post.data.title }}</li>
 {%- endfor -%}
 </ul>
+
+
+
+{% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}">Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}">Next Page</a>
+{% endif %}
