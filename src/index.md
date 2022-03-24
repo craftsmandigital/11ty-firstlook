@@ -30,11 +30,7 @@ Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labor
   <a href="{{pagination.href.next}}">Next Page</a>
 {% endif %}
 
-# Dette funker som F
-<ul>
-  {%- for species in pokemon %}
-  <a href="{{spesies.url}}">{{spesies.name}}</a>
-  <li>{{ species.name }}</li>
-  <li>{{ species.url }}</li>
-  {% endfor -%}
-</ul>
+  
+{%- for species in pokemon %}
+ - [{{species.name}}]({{species.url}}) 
+{% endfor -%}
