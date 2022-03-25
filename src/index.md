@@ -30,7 +30,8 @@ Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labor
   <a href="{{pagination.href.next}}">Next Page</a>
 {% endif %}
 
-  
+ faan i helvete 
 {%- for species in pokemon %}
  - [{{species.name}}]({{species.url}}) 
+ {{species.language}}
 {% endfor -%}

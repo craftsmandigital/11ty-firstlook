@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<h1>My repos</h1>
+<ul>
+
+{% for item in pokemon %}
+<li><a href="{{item.html_url}}">{{item.name}}</a></li>
+{% else %}
+  <li>This would display if the 'item' collection were empty</li>
+{% endfor %}
+</ul>
