@@ -5,7 +5,14 @@ layout: base.njk
 <ul>
 
 {% for item in pokemon %}
-<li><a href="{{item.html_url}}">{{item.name}}</a></li>
+<li><a href="../gitrepo/{{item.name | slug}}">{{item.name}}</a></li>
+
+<ul>
+  {% for key, value in item %}
+      <li>{{ key }}: {{ value }}</li>
+  {% endfor %}
+</ul>
+
 {% else %}
   <li>This would display if the 'item' collection were empty</li>
 {% endfor %}
