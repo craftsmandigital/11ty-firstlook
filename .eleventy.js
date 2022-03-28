@@ -9,3 +9,23 @@ module.exports = function(eleventyConfig) {
     }
   }
 };
+
+
+
+
+
+const Image = require("@11ty/eleventy-img");
+
+(async () => {
+  // let url = "https://mikaelkirken.no/wp-content/uploads/sites/2/2022/03/20200428_164658-scaled.jpg";
+  let url = "./myimages/IMG-4373.jpeg";
+
+  let stats = await Image(url, {
+    outputDir: "./_site/img/",
+    widths: [200, 400, null],
+    formats: ["jpg"]
+  });
+
+
+  console.log(stats);
+})();
