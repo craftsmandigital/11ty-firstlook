@@ -4,7 +4,7 @@ layout: base.njk
 <h1>My repos</h1>
 <ul>
 
-{% for item in pokemon %}
+{% for item in gitrepo %}
 <li><a href="../gitrepo/{{item.name | slug}}">{{item.name}}</a></li>
 
 <ul>

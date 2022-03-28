@@ -16,6 +16,6 @@
     "@11ty/eleventy": "^1.0.0"
   },
   "dependencies": {
-    "axios": "^0.26.1"
+    "@11ty/eleventy-fetch": "^3.0.0"
   }
 }
