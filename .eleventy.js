@@ -20,6 +20,7 @@ const Image = require("@11ty/eleventy-img");
   // let url = "https://mikaelkirken.no/wp-content/uploads/sites/2/2022/03/20200428_164658-scaled.jpg";
   let url = "./myimages/IMG-4373.jpeg";
 
+  console.log("production or develeopment environment --> " + process.env.NODE_ENV);
   let stats = await Image(url, {
     outputDir: "./_site/img/",
     widths: [200, 400, null],
