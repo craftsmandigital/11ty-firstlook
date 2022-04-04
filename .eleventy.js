@@ -1,26 +1,8 @@
 
 
 
-const htmlmin = require("html-minifier");
 
 
-const minify = (eleventyConfig) => {
-  // minifying all html files in whole project
-  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
-  // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (this.outputPath && this.outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-    return content;
-  });
-};
 
 module.exports = function(eleventyConfig) {
 
@@ -29,7 +11,8 @@ module.exports = function(eleventyConfig) {
   const isProduction = process.env.NODE_ENV === 'PROD';
 
   if (isProduction) {
-    minify(eleventyConfig);
+    const bundle = require('./bundle');
+    bundle.minify(eleventyConfig);
   }
 
   // Copy any .jpg file to `_site`, via Glob pattern
